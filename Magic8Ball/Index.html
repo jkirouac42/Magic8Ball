@@ -4,7 +4,7 @@
     <title></title>
 	<meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="StyleSheet1.css"
-   <!--<script type="text/javascript" src="~/Scripts/Javascript.js"></script>-->
+ 
 </head>
 <body>
     <h1>Magic 8 Ball</h1>
@@ -12,18 +12,19 @@
         Just ask a question and hit the Shake button<br /> 
         and the Magic 8 Ball will answer you.
     </p>
-
-  <button onclick="getRandom()">Shake!</button>
+    <script>
+    var responses = ["Yes", "No", "Maybe", "Unclear try again later", "Wrong question"];    
+    function getRandom() {
+        var rand = Math.floor(Math.random() * responses.length);
+        var concat = responses[rand];
+        document.getElementById("answer").innerHTML = (concat)
+    }
+    </script>
+    <button onclick="getRandom()">Shake!</button>
     <p id="answer"></p>
 
-<script>    function getRandom(){
-    var responses = ["Yes", "No", "Maybe", "Unclear try again later", "Wrong question"];
-    var x = Math.floor((Math.random() * 5));
-    document.getElementById("answer").innerHTML = responses[x];
-    }
-</script>
-    
 
-   
+    
+  
 </body>
 </html>
