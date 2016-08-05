@@ -3,21 +3,30 @@
 <head>
     <title></title>
 	<meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="StyleSheet1.css"
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css" />
 </head>
 <body>
-    <h1>Magic 8 Ball</h1>
+    <div>
+        <h1>Magic 8 Ball</h1>
+
+    </div>
+    <div class="epos"></div>
+    <div class="ball"></div>
+    <div class="innerBall"></div>
+    <div class="ewin"><p id="answer"></p></div>
     <p>
-        Just ask a question and hit the Shake button<br /> 
+        <button id="click" onclick="getRandom()">Shake!</button>
+        Just ask a question and hit the Shake button<br />
         and the Magic 8 Ball will answer you.
+
     </p>
-   
-    <button onclick="getRandom()">Shake!</button>
-    <p id="answer"></p>
 
 
-    
+
+
+
+
     <script src="JavaScript.js"></script>
-  
+
 </body>
 </html>
